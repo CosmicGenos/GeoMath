@@ -11,4 +11,6 @@ add_executable(GeoMath
         src/main.cpp
         src/Point.cpp
         headers/Point.h
+        src/Vector3D.cpp
+        headers/Vector3D.h
 )
