@@ -15,12 +15,10 @@ public:
     void setX(double x);
     void setY(double y);
     double distance(const Point &p) const;
-    double distanceFromStart(Point p);
-    Point Scale(int scale);
-    Point Scale(double scale);
-    Point Scale(double scaleX, double scaleY);
-    Point operator+(Point p);
-    Point operator-(Point p);
+    double distanceFromStart() const;
+    Point Scale(int scale) const;
+    Point operator+(const Point &p) const;
+    Point operator-(const Point& p) const;
     Point operator*(double scale);
     Point operator/(double scale);
     Point operator==(Point p);

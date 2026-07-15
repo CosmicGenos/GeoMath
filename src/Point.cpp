@@ -36,3 +36,18 @@ double Point::distance(const Point &p) const{
     return sqrt((pow(p.getX() - x_,2) + pow(p.getY() - y_,2)));
 }
 
+double Point::distanceFromStart() const{
+    return sqrt(x_*x_ + y_*y_);
+}
+
+Point Point::Scale(int scale) const {
+    return {x_*scale,y_*scale};
+}
+
+Point Point::operator+(const Point& p) const {
+    return {x_ + p.getX(),y_ + p.getY()};
+}
+
+Point Point::operator-(const Point& p) const {
+    return {x_ - p.getX(),y_ - p.getY()};
+}
