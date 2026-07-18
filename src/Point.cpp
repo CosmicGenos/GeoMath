@@ -51,3 +51,10 @@ Point Point::operator+(const Point& p) const {
 Point Point::operator-(const Point& p) const {
     return {x_ - p.getX(),y_ - p.getY()};
 }
+
+Point Point::operator*(double scale) const {
+    return {scale*x_,scale*y_};
+}
+Point operator*(double scale,Point &p) {
+    return {scale*p.getX(),scale*p.getY()};
+}

@@ -19,12 +19,12 @@ public:
     Point Scale(int scale) const;
     Point operator+(const Point &p) const;
     Point operator-(const Point& p) const;
-    Point operator*(double scale);
-    Point operator/(double scale);
-    Point operator==(Point p);
-    Point operator!=(Point p);
+    Point operator*(double scale) const;
+
 private:
     double x_, y_;
 };
+
+Point operator*(double scale, const Point& p);
 
 #endif //GEOMATH_POINT_H
