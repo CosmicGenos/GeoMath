@@ -13,7 +13,7 @@ Point::Point(double x, double y):x_(x),y_(y) {
     std::cout<<"Point constructor"<<std::endl;
 }
 
-Point::Point(const Point& p):x_(p.getY()),y_(p.getY()) {
+Point::Point(const Point& p):x_(p.getX()),y_(p.getY()) {
     std::cout<<"deep copy constructor"<<std::endl;
 }
 
@@ -55,6 +55,6 @@ Point Point::operator-(const Point& p) const {
 Point Point::operator*(double scale) const {
     return {scale*x_,scale*y_};
 }
-Point operator*(double scale,Point &p) {
+Point operator*(double scale, const Point& p) {
     return {scale*p.getX(),scale*p.getY()};
 }
